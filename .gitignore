@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+~$*
+*.xlsx
+
+# 生产环境报价单数据不入库，避免泄露客户信息
+data/quotes.json

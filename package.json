@@ -1,0 +1,14 @@
+{
+  "name": "agent-quote-platform",
+  "version": "1.0.0",
+  "description": "智能体开发报价网页与管理后台",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

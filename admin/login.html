@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>登录 · 智能排班智能体管理后台</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/admin/css/admin.css" />
+</head>
+<body class="login-page">
+  <div class="login-card">
+    <h1>管理后台</h1>
+    <p>智能排班智能体 · 报价与成本利润管理</p>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="password">管理员密码</label>
+        <input type="password" id="password" required placeholder="请输入密码" autofocus />
+      </div>
+      <button type="submit" class="btn btn-primary">登录</button>
+      <div id="error" class="error-msg"></div>
+    </form>
+    <p style="margin-top:1.5rem;font-size:0.75rem;color:var(--text-muted);text-align:center;">
+      <a href="/" style="color:var(--primary);">← 返回报价页</a>
+    </p>
+  </div>
+  <script>
+    (async function checkExistingSession() {
+      const token = localStorage.getItem("adminToken");
+      if (!token) return;
+      try {
+        const res = await fetch("/api/admin/stats", {
+          headers: { Authorization: "Bearer " + token },
+        });
+        if (res.ok) {
+          location.href = "/admin/";
+        } else {
+          localStorage.removeItem("adminToken");
+        }
+      } catch {
+        localStorage.removeItem("adminToken");
+      }
+    })();
+
+    document.getElementById("login-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const errEl = document.getElementById("error");
+      errEl.classList.remove("show");
+      errEl.textContent = "";
+      try {
+        const res = await fetch("/api/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ password: document.getElementById("password").value }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "登录失败");
+        localStorage.setItem("adminToken", data.token);
+        location.href = "/admin/";
+      } catch (err) {
+        errEl.textContent = err.message || "登录失败，请确认服务已启动且密码正确（默认 admin123）";
+        errEl.classList.add("show");
+      }
+    });
+  </script>
+</body>
+</html>

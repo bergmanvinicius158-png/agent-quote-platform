@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="智能排班智能体 — 企业建模、数字员工订阅、增值服务透明报价计算器" />
+  <title>智能排班智能体 · 报价计算器</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">排</span>
+        <div>
+          <strong id="product-name">智能排班智能体</strong>
+          <span>报价计算器</span>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="#enterprise">企业信息</a>
+        <a href="#fees">费用明细</a>
+        <a href="#overview">费用总览</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="calculator-app">
+    <div class="sheet-title">
+      <h1 id="sheet-title">智能排班智能体 — 报价计算器</h1>
+      <p class="sheet-hint">※ 黄色区域为可编辑输入项；修改企业信息后公式实时重算</p>
+    </div>
+
+    <section id="enterprise" class="sheet-section">
+      <h2 class="section-bar">▌ 企业信息（请填写黄色区域）</h2>
+      <div class="input-grid">
+        <div class="input-cell">
+          <label for="company">企业名称</label>
+          <input type="text" id="company" class="input-editable" placeholder="填写企业全称" />
+        </div>
+        <div class="input-cell">
+          <label for="name">联系人 *</label>
+          <input type="text" id="name" class="input-editable" required placeholder="您的姓名" />
+        </div>
+        <div class="input-cell">
+          <label for="email">邮箱 *</label>
+          <input type="email" id="email" class="input-editable" required placeholder="name@company.com" />
+        </div>
+        <div class="input-cell">
+          <label for="phone">联系电话</label>
+          <input type="tel" id="phone" class="input-editable" placeholder="便于商务联系" />
+        </div>
+        <div class="input-cell">
+          <label for="store-count">门店数量</label>
+          <div class="input-with-unit">
+            <input type="number" id="store-count" class="input-editable" min="1" value="150" />
+            <span>家</span>
+          </div>
+        </div>
+        <div class="input-cell">
+          <label for="contract-years">合同年限</label>
+          <div class="input-with-unit">
+            <input type="number" id="contract-years" class="input-editable" min="1" max="10" value="2" />
+            <span>年</span>
+          </div>
+        </div>
+        <div class="input-cell">
+          <label for="integration-count">系统对接套数</label>
+          <div class="input-with-unit">
+            <input type="number" id="integration-count" class="input-editable" min="0" value="2" />
+            <span>套</span>
+          </div>
+        </div>
+        <div class="input-cell full">
+          <label for="notes">备注说明</label>
+          <input type="text" id="notes" class="input-editable" placeholder="如：多品牌、特殊排班规则等" />
+        </div>
+      </div>
+    </section>
+
+    <section id="fees" class="sheet-section">
+      <div id="fee-sections"></div>
+    </section>
+
+    <section id="overview" class="sheet-section">
+      <h2 class="section-bar">▌ 费用总览</h2>
+      <div class="data-table-wrap">
+        <table class="data-table overview-table">
+          <thead>
+            <tr>
+              <th>费用项</th>
+              <th class="col-amount">金额（元）</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody id="overview-body"></tbody>
+        </table>
+      </div>
+      <form id="quote-form" class="submit-bar">
+        <button type="submit" class="btn-submit">提交报价申请</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>© <span id="year"></span> 智能排班智能体 · 含税报价仅供参考，最终以正式合同为准</p>
+    <a href="/admin/login.html">管理后台</a>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "node server.js"
+healthcheckPath = "/api/pricing"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5
+
+# 在 Railway 控制台为本项目添加 Volume，挂载路径: /app/data
+# Settings → Volumes → Mount Path: /app/data

@@ -1,0 +1,97 @@
+{
+  "productName": "智能排班智能体",
+  "annualPayDiscount": 0.83,
+  "implementationItems": [
+    {
+      "id": "data-modeling",
+      "name": "企业数据建模",
+      "unitPrice": 20000,
+      "defaultQty": 1,
+      "qtyField": null,
+      "description": "岗位/班次/规则录入（自动按门店规模定价）"
+    },
+    {
+      "id": "integration",
+      "name": "系统对接费",
+      "unitPrice": 2500,
+      "defaultQty": 2,
+      "qtyField": "integrationCount",
+      "description": "与 HR/考勤系统、POS 系统 API 对接（套数可调整）"
+    },
+    {
+      "id": "consulting",
+      "name": "业务梳理咨询",
+      "unitPrice": 9000,
+      "defaultQty": 3,
+      "qtyField": null,
+      "description": "现场调研与排班规则设计"
+    },
+    {
+      "id": "deployment",
+      "name": "部署实施+测试",
+      "unitPrice": 8000,
+      "defaultQty": 1,
+      "qtyField": null,
+      "description": "沙箱测试＋上线部署＋验收支持"
+    },
+    {
+      "id": "training",
+      "name": "培训服务",
+      "unitPrice": 2000,
+      "defaultQty": 2,
+      "qtyField": null,
+      "description": "管理员＋店长操作培训（场次可调整）"
+    }
+  ],
+  "subscriptionTiers": [
+    {
+      "id": "tier1",
+      "name": "档位1",
+      "label": "档1",
+      "minStores": 1,
+      "maxStores": 100,
+      "pricePerStore": 119,
+      "description": "适合单城市连锁品牌"
+    },
+    {
+      "id": "tier2",
+      "name": "档位2",
+      "label": "档2",
+      "minStores": 101,
+      "maxStores": 300,
+      "pricePerStore": 79,
+      "description": "区域扩张阶段，单价略高覆盖服务成本"
+    },
+    {
+      "id": "tier3",
+      "name": "档位3",
+      "label": "档3",
+      "minStores": 301,
+      "maxStores": 1000,
+      "pricePerStore": 59,
+      "description": "规模越大均摊越低，形成扩张激励"
+    },
+    {
+      "id": "tier4",
+      "name": "档位4",
+      "label": "档4",
+      "minStores": 1001,
+      "maxStores": null,
+      "pricePerStore": null,
+      "customQuote": true,
+      "description": "专属商务报价 + 定制 SLA"
+    }
+  ],
+  "sectionDescriptions": {
+    "implementation": "合同签订后首期支付，按实施完成里程碑付款",
+    "subscription": "按门店数分档 × 月收取，可选月付或年付（年付享 83 折）",
+    "addons": "按月收取，合同期内合计金额"
+  },
+  "paymentNotes": {
+    "implementation": "合同签订后首期支付，按实施完成里程碑付款",
+    "subscription": "可选月付或年付（年付享 83 折，详见分档计算）",
+    "addons": "按月收取，合同期内合计金额",
+    "total": "含以上三项，含税报价",
+    "firstYear": "一次性费用＋首年订阅（月付）＋首年增值服务"
+  }
+}

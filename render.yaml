@@ -1,0 +1,16 @@
+# Render Blueprint — 免费版一键部署
+# 持久化 data/ 需升级 Starter 后在 Dashboard 手动添加 Disk，或使用 Railway Volume
+services:
+  - type: web
+    name: agent-quote-platform
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: echo "No build step"
+    startCommand: node server.js
+    healthCheckPath: /api/pricing
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: ADMIN_PASSWORD
+        sync: false
