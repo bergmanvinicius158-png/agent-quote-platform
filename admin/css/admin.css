@@ -85,7 +85,11 @@ a { color: var(--primary); text-decoration: none; }
 
 .btn-primary { background: var(--primary); color: #fff; width: 100%; }
 .btn-ghost { background: #fff; color: var(--text-muted); border: 1px solid var(--border); }
+.btn-danger { background: #fff; color: var(--danger); border: 1px solid #fecaca; }
+.btn-danger:hover { background: #fef2f2; }
 .btn-sm { padding: 0.4rem 0.75rem; font-size: 0.75rem; }
+
+.action-btns { display: flex; gap: 0.35rem; flex-wrap: wrap; }
 
 .error-msg {
   display: none;

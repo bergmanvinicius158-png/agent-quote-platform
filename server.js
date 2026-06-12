@@ -481,6 +481,20 @@ async function handleApi(req, res, pathname) {
     }
   }
 
+  if (quoteMatch && method === "DELETE") {
+    if (!requireAuth(req, res)) return;
+    try {
+      const quotes = readJson("quotes.json");
+      const idx = quotes.findIndex((q) => q.id === quoteMatch[1]);
+      if (idx === -1) return send(res, 404, { error: "报价单不存在" });
+      const removed = quotes.splice(idx, 1)[0];
+      writeJson("quotes.json", quotes);
+      return send(res, 200, { success: true, quote: removed });
+    } catch {
+      return send(res, 400, { error: "删除失败" });
+    }
+  }
+
   if (pathname === "/api/admin/quotes/cost-profit" && method === "POST") {
     if (!requireAuth(req, res)) return;
     try {
@@ -559,7 +573,7 @@ const server = http.createServer(async (req, res) => {
   const pathname = decodeURIComponent(url.pathname);
 
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, OPTIONS");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
   if (req.method === "OPTIONS") {

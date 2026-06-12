@@ -105,13 +105,39 @@ function renderQuotesTable(filter = "") {
       <td>${fmt(quoteAmount(q))}</td>
       <td>${badge(q.status)}</td>
       <td>${fmtDate(q.createdAt)}</td>
-      <td><button class="btn btn-ghost btn-sm" data-view="${q.id}">查看</button></td>
+      <td class="action-btns">
+        <button type="button" class="btn btn-ghost btn-sm" data-view="${q.id}">查看</button>
+        <button type="button" class="btn btn-danger btn-sm" data-delete="${q.id}">删除</button>
+      </td>
     </tr>`
     )
     .join("");
   tbody.querySelectorAll("[data-view]").forEach((btn) => {
     btn.addEventListener("click", () => openQuoteModal(btn.dataset.view));
   });
+  tbody.querySelectorAll("[data-delete]").forEach((btn) => {
+    btn.addEventListener("click", () => deleteQuote(btn.dataset.delete));
+  });
+}
+
+async function deleteQuote(id) {
+  const q = quotes.find((x) => x.id === id);
+  if (!q) return;
+  const label = q.company || q.name || q.email;
+  if (!confirm(`确定删除报价单「${label}」？此操作不可恢复。`)) return;
+  try {
+    await api(`/api/admin/quotes/${id}`, { method: "DELETE" });
+    if (currentQuoteId === id) {
+      document.getElementById("quote-modal").classList.remove("open");
+      currentQuoteId = null;
+    }
+    quotes = await api("/api/admin/quotes");
+    renderQuotesTable(document.getElementById("status-filter").value);
+    populateProfitSelect();
+    await loadDashboard();
+  } catch (err) {
+    alert(err.message || "删除失败");
+  }
 }
 
 function renderBreakdown(breakdown) {
@@ -350,6 +376,10 @@ async function init() {
 
   document.getElementById("status-filter").addEventListener("change", (e) => renderQuotesTable(e.target.value));
   document.getElementById("modal-close").addEventListener("click", () => document.getElementById("quote-modal").classList.remove("open"));
+
+  document.getElementById("modal-delete").addEventListener("click", () => {
+    if (currentQuoteId) deleteQuote(currentQuoteId);
+  });
 
   document.getElementById("modal-save").addEventListener("click", async () => {
     const payload = {
