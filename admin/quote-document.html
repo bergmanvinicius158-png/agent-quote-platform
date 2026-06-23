@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>对客报价单</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/admin/css/quote-document.css" />
+  <link rel="stylesheet" href="/css/brand.css" />
+</head>
+<body>
+  <div class="doc-toolbar no-print">
+    <button type="button" class="btn btn-ghost" id="btn-back">← 返回管理后台</button>
+    <div class="doc-toolbar-actions">
+      <button type="button" class="btn btn-ghost" id="btn-print">打印 / 另存 PDF</button>
+    </div>
+  </div>
+  <div id="doc-loading" class="doc-loading no-print">正在加载报价单…</div>
+  <article class="quote-doc" id="quote-doc" hidden></article>
+  <script src="/admin/js/quote-document.js"></script>
+</body>
+</html>

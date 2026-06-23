@@ -1,4 +1,4 @@
-# 部署指南（Railway / Render）
+# 部署指南
 
 本项目是 **Node.js 全栈应用**，需运行 `node server.js`，不能作为纯静态站点部署。
 
@@ -6,13 +6,61 @@
 
 ## 部署前检查
 
-- [ ] 已准备 GitHub 账号
+- [ ] 已准备 GitHub 账号（海外 PaaS）或云服务器（国内 VPS）
 - [ ] 已设置强密码 `ADMIN_PASSWORD`（生产环境勿用 `admin123`）
-- [ ] 定价模板文件在 `data/pricing.json`、`data/addons.json`、`data/costs.json` 中已配置好
+- [ ] 各智能体配置位于 `data/agents/{id}/pricing.json` 等，平台设置在 `data/platform.json`
 
 ---
 
-## 方式 A：Render（推荐，配置已内置）
+## 方式 A：国内云 VPS（推荐国内访问）
+
+适用于阿里云、腾讯云、华为云等 Ubuntu 服务器。项目已提供 [`deploy/`](deploy/) 目录脚本。
+
+### 快速步骤
+
+1. **采购云服务器** — 见 [`deploy/PROVISION.md`](deploy/PROVISION.md)（Ubuntu 22.04，安全组放行 22/80/443）
+2. **SSH 登录后一键安装**：
+
+```bash
+git clone https://github.com/bergmanvinicius158-png/agent-quote-platform.git
+cd agent-quote-platform
+sudo DOMAIN=你的公网IP或域名 ADMIN_PASSWORD=你的强密码 bash deploy/install-vps.sh
+```
+
+脚本将自动完成：Node.js 20、代码部署、`systemd` 守护、Nginx 反代、每日 `data/` 备份 cron、健康检查。
+
+3. **访问**
+   - 报价页：`http://你的域名或IP/`
+   - 管理后台：`http://你的域名或IP/admin/login.html`
+
+4. **HTTPS（有备案域名）**
+
+```bash
+sudo apt install -y certbot python3-certbot-nginx
+sudo certbot --nginx -d quote.yourdomain.com
+```
+
+### 环境变量
+
+复制 [`deploy/env.example`](deploy/env.example) 为 `/opt/agent-quote-platform/.env`（`install-vps.sh` 会自动创建）。`server.js` 启动时会读取 `.env`。
+
+| 变量 | 必填 | 说明 |
+|------|------|------|
+| `ADMIN_PASSWORD` | **是** | 管理后台密码 |
+| `PORT` | 否 | 默认 3456，仅本机监听 |
+
+### 手动维护
+
+```bash
+sudo systemctl status agent-quote    # 服务状态
+sudo journalctl -u agent-quote -f    # 日志
+bash /opt/agent-quote-platform/deploy/verify.sh   # 健康检查
+/opt/backup-quote.sh                 # 手动备份 data/
+```
+
+---
+
+## 方式 B：Render（海外 PaaS）
 
 项目根目录已包含 [`render.yaml`](render.yaml)，支持 Blueprint 一键部署。
 
@@ -50,7 +98,7 @@
 
 ---
 
-## 方式 B：Railway
+## 方式 C：Railway
 
 项目根目录已包含 [`railway.toml`](railway.toml)。
 

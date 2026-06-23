@@ -1,0 +1,56 @@
+[
+  {
+    "id": "scheduling-agent",
+    "name": "排班智能体",
+    "shortName": "排班",
+    "icon": "排",
+    "enabled": true,
+    "sortOrder": 1,
+    "description": "智能排班、班次规则、人力优化与合规预警"
+  },
+  {
+    "id": "ordering-agent",
+    "name": "订货智能体",
+    "shortName": "订货",
+    "icon": "订",
+    "enabled": true,
+    "sortOrder": 2,
+    "description": "智能要货、安全库存、供应商协同与损耗分析"
+  },
+  {
+    "id": "store-ops-agent",
+    "name": "门店运营智能体",
+    "shortName": "运营",
+    "icon": "营",
+    "enabled": true,
+    "sortOrder": 3,
+    "description": "开店/闭店检查、任务督导、营运日报与异常预警"
+  },
+  {
+    "id": "kitchen-agent",
+    "name": "后厨帮手智能体",
+    "shortName": "后厨",
+    "icon": "厨",
+    "enabled": true,
+    "sortOrder": 4,
+    "description": "备餐计划、出餐时效、食安台账与厨务协同"
+  },
+  {
+    "id": "marketing-agent",
+    "name": "自动营销智能体",
+    "shortName": "营销",
+    "icon": "销",
+    "enabled": true,
+    "sortOrder": 5,
+    "description": "会员触达、活动推荐、券包策略与转化分析"
+  },
+  {
+    "id": "menu-agent",
+    "name": "菜单管理智能体",
+    "shortName": "菜单",
+    "icon": "菜",
+    "enabled": true,
+    "sortOrder": 6,
+    "description": "菜品库、配方成本、时令菜单与多店同步"
+  }
+]

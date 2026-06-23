@@ -1,0 +1,7 @@
+[
+  { "id": "prep-plan", "name": "智能备餐计划", "description": "根据预估客流自动生成备料/预制计划", "monthlyPrice": 350, "billingType": "monthly" },
+  { "id": "food-safety", "name": "食安台账包", "description": "留样/测温/清洁消毒电子台账与到期提醒", "monthlyPrice": 280, "billingType": "monthly" },
+  { "id": "kds-optimize", "name": "出餐时效优化", "description": "档口负载均衡、超时预警、催菜协同", "monthlyPrice": 320, "billingType": "monthly" },
+  { "id": "dedicated-service", "name": "专人企业服务", "description": "7×24 小时专职人员响应服务", "monthlyPrice": 500, "billingType": "monthly" },
+  { "id": "maintenance", "name": "维保响应服务", "description": "工作时间服务响应，重要节假日保障", "monthlyPrice": 0, "billingType": "monthly" }
+]

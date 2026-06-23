@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 32" fill="none" role="img" aria-label="Foundex">
+  <path d="M16 2.5L27.5 9v14L16 29.5 4.5 23V9L16 2.5Z" fill="#fff" fill-opacity="0.95"/>
+  <path d="M16 2.5L27.5 9v14L16 29.5V2.5Z" fill="#60A5FA"/>
+  <path d="M11.5 9.5h7.5v2.5h-5v2.25h4.75v2.5H14v2.25h5.5v2.5H11.5V9.5Z" fill="#0A2463"/>
+  <path d="M12 21.5h6.5v1.75H12V21.5Z" fill="#94A3B8"/>
+  <text x="38" y="22.5" font-family="'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif" font-size="17" font-weight="700">
+    <tspan fill="#FFFFFF">Found</tspan><tspan fill="#60A5FA">ex</tspan>
+  </text>
+</svg>

@@ -1,0 +1,53 @@
+{
+  "platformName": "数字员工报价平台",
+  "tagline": "多智能体组合报价计算器",
+  "salesEmail": "sales@example.com",
+  "bundleDiscounts": [
+    {
+      "minAgents": 2,
+      "discountRate": 0.92,
+      "label": "2 个智能体组合 92折"
+    },
+    {
+      "minAgents": 3,
+      "discountRate": 0.89,
+      "label": "3 个智能体组合 89 折"
+    },
+    {
+      "minAgents": 4,
+      "discountRate": 0.85,
+      "label": "4 个智能体组合85 折"
+    },
+    {
+      "minAgents": 5,
+      "discountRate": 0.79,
+      "label": "5 个智能体组合79 折"
+    },
+    {
+      "minAgents": 6,
+      "discountRate": 0.72,
+      "label": "6 个智能体全 suite 72 折"
+    }
+  ],
+  "bundleDiscountApplyTo": "subscription",
+  "sharedCostScaling": [
+    {
+      "name": "服务器与基础设施（月）",
+      "costItemId": "infra",
+      "incrementalRatePerAgent": 0.6,
+      "description": "多智能体共用基础设施，每增 1 个智能体成本6折增加"
+    },
+    {
+      "name": "客户成功/运营人力（月）",
+      "costItemId": "cs",
+      "incrementalRatePerAgent": 0.7,
+      "description": "客户成功团队可复用，每增 1 个智能体成本7折增加"
+    },
+    {
+      "name": "销售与市场费用",
+      "costItemId": "sales",
+      "incrementalRatePerAgent": 0.4,
+      "description": "销售与市场投入可复用，每增 1 个智能体成本4折增加"
+    }
+  ]
+}

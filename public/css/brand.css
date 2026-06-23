@@ -1,0 +1,148 @@
+/* Foundex brand lockup — 深底用浅色 logo，浅底用深色 logo */
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.brand-lockup:hover { text-decoration: none; }
+
+.brand-wordmark {
+  display: block;
+  height: 1.625rem;
+  width: auto;
+  max-width: 7.5rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.brand-wordmark--on-dark {
+  height: 1.5rem;
+  max-width: 6.75rem;
+}
+
+.brand-divider {
+  width: 1px;
+  align-self: stretch;
+  min-height: 2.125rem;
+  flex-shrink: 0;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.brand-copy strong {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand-copy span,
+.brand-product {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+}
+
+/* 深色底：浅色 logo + 白字 */
+.brand-lockup--dark {
+  color: #fff;
+}
+
+.brand-lockup--dark .brand-divider {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.brand-lockup--dark .brand-copy span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* 浅色底：深色 logo + 深字 */
+.brand-lockup--light {
+  color: var(--text, #1e293b);
+}
+
+.brand-lockup--light .brand-divider {
+  background: #cbd5e1;
+}
+
+.brand-lockup--light .brand-copy span,
+.brand-lockup--light .brand-product {
+  color: var(--text-muted, #64748b);
+}
+
+.brand-lockup--center {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.875rem;
+}
+
+.brand-lockup--stack .brand-divider {
+  width: 2.5rem;
+  height: 1px;
+  min-height: 0;
+  align-self: center;
+  background: #cbd5e1;
+}
+
+.brand-lockup--stack .brand-wordmark {
+  height: 2rem;
+  max-width: 9rem;
+}
+
+.brand-lockup--stack .brand-product {
+  margin: 0;
+  font-size: 0.8125rem;
+}
+
+.brand-lockup--doc {
+  gap: 1rem;
+}
+
+.brand-lockup--doc .brand-wordmark {
+  height: 2rem;
+  max-width: 9rem;
+}
+
+.brand-lockup--doc .brand-doc-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.brand-lockup--doc .brand-doc-title h1 {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text, #1e293b);
+}
+
+.brand-lockup--doc .brand-doc-title p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted, #64748b);
+}
+
+@media (max-width: 640px) {
+  .brand-copy span { display: none; }
+  .brand-lockup { gap: 0.625rem; }
+}

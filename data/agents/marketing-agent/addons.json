@@ -1,0 +1,7 @@
+[
+  { "id": "campaign-auto", "name": "自动化活动引擎", "description": "生日/沉睡唤醒/满减/组合券自动触发", "monthlyPrice": 450, "billingType": "monthly" },
+  { "id": "member-segment", "name": "会员分群洞察", "description": "RFM 分群、消费偏好、流失预警", "monthlyPrice": 380, "billingType": "monthly" },
+  { "id": "channel-hub", "name": "全渠道触达包", "description": "短信/企微/小程序订阅消息统一编排", "monthlyPrice": 350, "billingType": "monthly" },
+  { "id": "dedicated-service", "name": "专人企业服务", "description": "7×24 小时专职人员响应服务", "monthlyPrice": 500, "billingType": "monthly" },
+  { "id": "maintenance", "name": "维保响应服务", "description": "工作时间服务响应，重要节假日保障", "monthlyPrice": 0, "billingType": "monthly" }
+]

@@ -1,46 +1,46 @@
 {
-  "productName": "智能排班智能体",
-  "annualPayDiscount": 0.88,
+  "productName": "后厨帮手智能体",
+  "annualPayDiscount": 0.95,
   "implementationItems": [
     {
       "id": "data-modeling",
-      "name": "企业数据建模",
-      "unitPrice": 20000,
+      "name": "厨务数据建模",
+      "unitPrice": 24000,
       "defaultQty": 1,
       "qtyField": null,
-      "description": "岗位/班次/规则录入（自动按门店规模定价）"
+      "description": "菜品工艺/备餐计划/食安台账/岗位录入"
     },
     {
       "id": "integration",
       "name": "系统对接费",
-      "unitPrice": 2500,
+      "unitPrice": 2400,
       "defaultQty": 2,
       "qtyField": "integrationCount",
-      "description": "与 HR/考勤系统、POS 系统 API 对接（套数可调整）"
+      "description": "与 KDS/厨打/POS 厨务模块对接"
     },
     {
       "id": "consulting",
-      "name": "业务梳理咨询",
-      "unitPrice": 9000,
-      "defaultQty": 3,
+      "name": "厨务流程咨询",
+      "unitPrice": 7500,
+      "defaultQty": 2,
       "qtyField": null,
-      "description": "现场调研与排班规则设计"
+      "description": "调研出餐流程、备餐与食安规范"
     },
     {
       "id": "deployment",
       "name": "部署实施+测试",
-      "unitPrice": 8000,
+      "unitPrice": 7000,
       "defaultQty": 1,
       "qtyField": null,
-      "description": "沙箱测试＋上线部署＋验收支持"
+      "description": "沙箱测试＋上线部署＋验收"
     },
     {
       "id": "training",
       "name": "培训服务",
-      "unitPrice": 1000,
+      "unitPrice": 2000,
       "defaultQty": 2,
       "qtyField": null,
-      "description": "管理员＋店长操作培训（场次可调整）"
+      "description": "厨师长/档口负责人操作培训"
     }
   ],
   "subscriptionTiers": [
@@ -50,7 +50,7 @@
       "label": "档1",
       "minStores": 1,
       "maxStores": 10,
-      "pricePerStore": 299,
+      "pricePerStore": 269,
       "description": "适合单城市连锁品牌"
     },
     {
@@ -59,7 +59,7 @@
       "label": "档2",
       "minStores": 11,
       "maxStores": 50,
-      "pricePerStore": 209,
+      "pricePerStore": 199,
       "description": "区域扩张阶段，单价略高覆盖服务成本"
     },
     {
@@ -68,7 +68,7 @@
       "label": "档3",
       "minStores": 51,
       "maxStores": 200,
-      "pricePerStore": 169,
+      "pricePerStore": 159,
       "description": "规模越大均摊越低，形成扩张激励"
     },
     {
@@ -86,18 +86,18 @@
       "label": "档5",
       "minStores": 501,
       "maxStores": 3000,
-      "pricePerStore": 109,
+      "pricePerStore": 99,
       "description": "超大规模集团，专属 SLA 与定制支持"
     }
   ],
   "sectionDescriptions": {
     "implementation": "合同签订后首期支付，按实施完成里程碑付款",
-    "subscription": "按门店数分档 × 月收取，可选月付或年付（年付享 83 折）",
+    "subscription": "按门店数分档 × 月收取，可选月付或年付（年付享 88 折）",
     "addons": "按月收取，合同期内合计金额"
   },
   "paymentNotes": {
     "implementation": "合同签订后首期支付，按实施完成里程碑付款",
-    "subscription": "可选月付或年付（年付享 83 折，详见分档计算）",
+    "subscription": "可选月付或年付（年付享 88 折，详见分档计算）",
     "addons": "按月收取，合同期内合计金额",
     "total": "含以上三项，含税报价",
     "firstYear": "一次性费用＋首年订阅（月付）＋首年增值服务"

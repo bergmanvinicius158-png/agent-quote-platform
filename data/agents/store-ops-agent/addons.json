@@ -1,0 +1,7 @@
+[
+  { "id": "patrol-checklist", "name": "智能巡店检查包", "description": "开店/闭店/时段检查清单，拍照留痕与整改闭环", "monthlyPrice": 450, "billingType": "monthly" },
+  { "id": "ops-dashboard", "name": "营运指挥看板", "description": "任务完成率、异常门店热力图、区域排名", "monthlyPrice": 400, "billingType": "monthly" },
+  { "id": "task-dispatch", "name": "总部任务下发", "description": "总部一键下发营运任务，门店执行进度追踪", "monthlyPrice": 300, "billingType": "monthly" },
+  { "id": "dedicated-service", "name": "专人企业服务", "description": "7×24 小时专职人员响应服务", "monthlyPrice": 500, "billingType": "monthly" },
+  { "id": "maintenance", "name": "维保响应服务", "description": "工作时间服务响应，重要节假日保障", "monthlyPrice": 0, "billingType": "monthly" }
+]

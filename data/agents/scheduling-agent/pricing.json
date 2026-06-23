@@ -1,6 +1,6 @@
 {
-  "productName": "智能排班智能体",
-  "annualPayDiscount": 0.88,
+  "productName": "排班智能体",
+  "annualPayDiscount": 0.95,
   "implementationItems": [
     {
       "id": "data-modeling",
@@ -50,7 +50,7 @@
       "label": "档1",
       "minStores": 1,
       "maxStores": 10,
-      "pricePerStore": 299,
+      "pricePerStore": 359,
       "description": "适合单城市连锁品牌"
     },
     {
@@ -59,7 +59,7 @@
       "label": "档2",
       "minStores": 11,
       "maxStores": 50,
-      "pricePerStore": 209,
+      "pricePerStore": 259,
       "description": "区域扩张阶段，单价略高覆盖服务成本"
     },
     {
@@ -92,12 +92,12 @@
   ],
   "sectionDescriptions": {
     "implementation": "合同签订后首期支付，按实施完成里程碑付款",
-    "subscription": "按门店数分档 × 月收取，可选月付或年付（年付享 83 折）",
+    "subscription": "按门店数分档 × 月收取，可选月付或年付（年付享 88 折）",
     "addons": "按月收取，合同期内合计金额"
   },
   "paymentNotes": {
     "implementation": "合同签订后首期支付，按实施完成里程碑付款",
-    "subscription": "可选月付或年付（年付享 83 折，详见分档计算）",
+    "subscription": "可选月付或年付（年付享 88 折，详见分档计算）",
     "addons": "按月收取，合同期内合计金额",
     "total": "含以上三项，含税报价",
     "firstYear": "一次性费用＋首年订阅（月付）＋首年增值服务"

@@ -1,0 +1,19 @@
+[Unit]
+Description=Foundex Agent Quote Platform
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/agent-quote-platform
+EnvironmentFile=-/opt/agent-quote-platform/.env
+Environment=PORT=3456
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

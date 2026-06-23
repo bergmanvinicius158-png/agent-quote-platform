@@ -3,70 +3,70 @@
     {
       "id": "fde",
       "name": "FDE 实施人力成本",
-      "unitPrice": 1200,
-      "quantity": 30,
+      "unitPrice": 1150,
+      "quantity": 26,
       "unit": "人/天",
       "description": "含项目经理、实施工程师"
     },
     {
       "id": "travel",
       "name": "差旅与驻场费",
-      "unitPrice": 8000,
+      "unitPrice": 7500,
       "quantity": 1,
       "unit": "次",
-      "description": "客户现场差旅、住宿、补贴费用"
+      "description": "客户现场差旅、住宿、补贴"
     },
     {
       "id": "ai-token",
-      "name": "AI 模型推理成本（Token，月）",
-      "unitPrice": 20,
+      "name": "AI 模型推理成本",
+      "unitPrice": 25,
       "quantityFields": [
         "storeCount",
         "contractMonths"
       ],
       "unit": "店·月",
-      "description": "单价×门店数×使用月数，与门店规模及合同期成正比"
+      "description": "单价×门店数×合同月数"
     },
     {
       "id": "infra",
-      "name": "服务器与基础设施（月）",
-      "unitPrice": 800,
+      "name": "服务器与基础设施",
+      "unitPrice": 750,
       "quantityField": "contractMonths",
       "unit": "月",
-      "description": "云服务器、存储、网络等（月费×月数）"
+      "description": "云资源按合同期摊销"
     },
     {
       "id": "cs",
-      "name": "客户成功/运营人力（月）",
-      "unitPrice": 800,
+      "name": "客户成功/运营人力",
+      "unitPrice": 750,
       "quantityField": "contractMonths",
       "unit": "月",
       "requiresAddon": "dedicated-service",
-      "description": "负责客户服务与续约的人员成本；仅当报价含「专人企业服务」时计入"
+      "description": "含专人企业服务时计入"
     },
     {
       "id": "rd",
-      "name": "研发摊销（月）",
-      "unitPrice": 1500,
+      "name": "研发摊销",
+      "unitPrice": 1300,
       "quantityField": "contractMonths",
       "unit": "月",
-      "description": "产品研发费用按合同期摊销"
+      "description": "产品研发按合同期摊销"
     },
     {
       "id": "sales",
       "name": "销售与市场费用",
-      "unitPrice": 20000,
+      "unitPrice": 18000,
       "quantity": 1,
       "unit": "项",
-      "description": "该客户的获客、销售佣金、市场活动费用"
+      "description": "获客与渠道费用"
     },
     {
       "id": "tax",
       "name": "税费及其他",
-      "unitPrice": 11400,
+      "unitPrice": 9500,
       "quantity": 1,
       "unit": "项",
-      "description": "增值税、附加税、其他合规费用"
+      "description": "增值税及附加"
     }
   ]
 }

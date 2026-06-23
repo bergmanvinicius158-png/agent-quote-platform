@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="Foundex">
+  <path d="M16 3L26.66 9.25v13.5L16 28.75 5.34 22.75V9.25L16 3Z" fill="#0A2463"/>
+  <path d="M16 3L26.66 9.25v13.5L16 28.75V3Z" fill="#2563EB"/>
+  <path d="M11.25 10h8v2.35h-5.35v1.95h4.55v2.35H14v1.95h5.75V22H11.25V10Z" fill="#fff"/>
+  <path d="M11.75 20.65h6.75v1.55H11.75V20.65Z" fill="#CBD5E1"/>
+</svg>

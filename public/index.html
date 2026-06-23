@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="智能排班智能体 — 企业建模、数字员工订阅、增值服务透明报价计算器" />
-  <title>智能排班智能体 · 报价计算器</title>
+  <meta name="description" content="数字员工报价平台 — 多智能体组合报价计算器" />
+  <title>数字员工报价平台 · 报价计算器</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/brand.css" />
 </head>
 <body>
   <header class="app-header">
     <div class="header-inner">
-      <div class="brand">
-        <span class="brand-icon">排</span>
-        <div>
-          <strong id="product-name">智能排班智能体</strong>
-          <span>报价计算器</span>
-        </div>
+      <div class="brand-lockup brand-lockup--dark">
+        <img src="/images/foundex-logo-light.png" alt="Foundex" class="brand-wordmark brand-wordmark--on-dark" />
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong id="platform-name">数字员工报价平台</strong>
+          <span id="platform-tagline">多智能体组合报价计算器</span>
+        </span>
       </div>
       <nav class="header-nav">
+        <a href="#agents">选择智能体</a>
         <a href="#enterprise">企业信息</a>
         <a href="#fees">费用明细</a>
         <a href="#overview">费用总览</a>
@@ -30,9 +33,15 @@
 
   <main class="calculator-app">
     <div class="sheet-title">
-      <h1 id="sheet-title">智能排班智能体 — 报价计算器</h1>
-      <p class="sheet-hint">※ 黄色区域为可编辑输入项；修改企业信息后公式实时重算</p>
+      <h1 id="sheet-title">数字员工报价平台 — 报价计算器</h1>
+      <p class="sheet-hint">※ 黄色区域为可编辑输入项；可多选智能体组合报价，修改信息后公式实时重算</p>
     </div>
+
+    <section id="agents" class="sheet-section">
+      <h2 class="section-bar">▌ 选择智能体（可多选）</h2>
+      <div id="agent-selector" class="agent-selector"></div>
+      <p id="bundle-hint" class="bundle-hint"></p>
+    </section>
 
     <section id="enterprise" class="sheet-section">
       <h2 class="section-bar">▌ 企业信息（请填写黄色区域）</h2>
@@ -76,7 +85,7 @@
         </div>
         <div class="input-cell full">
           <label for="notes">备注说明</label>
-          <input type="text" id="notes" class="input-editable" placeholder="如：多品牌、特殊排班规则等" />
+          <input type="text" id="notes" class="input-editable" placeholder="如：多品牌、特殊业务规则等" />
         </div>
       </div>
     </section>
@@ -106,7 +115,7 @@
   </main>
 
   <footer class="app-footer">
-    <p>© <span id="year"></span> 智能排班智能体 · 含税报价仅供参考，最终以正式合同为准</p>
+    <p>© <span id="year"></span> Foundex · <span id="footer-name">数字员工报价平台</span> · 含税报价仅供参考，最终以正式合同为准</p>
     <a href="/admin/login.html">管理后台</a>
   </footer>
 

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "auto-replenish",
+    "name": "智能补货策略包",
+    "description": "基于销售预测+安全库存自动生成要货建议，支持节假日系数",
+    "monthlyPrice": 400,
+    "billingType": "monthly"
+  },
+  {
+    "id": "supplier-portal",
+    "name": "供应商协同门户",
+    "description": "要货单推送、到货确认、差异对账在线协同",
+    "monthlyPrice": 350,
+    "billingType": "monthly"
+  },
+  {
+    "id": "waste-analytics",
+    "name": "损耗分析看板",
+    "description": "报损/盘点差异/过期预警，门店与品类维度分析",
+    "monthlyPrice": 300,
+    "billingType": "monthly"
+  },
+  {
+    "id": "dedicated-service",
+    "name": "专人企业服务",
+    "description": "7×24 小时专职人员响应服务",
+    "monthlyPrice": 500,
+    "billingType": "monthly"
+  },
+  {
+    "id": "maintenance",
+    "name": "维保响应服务",
+    "description": "工作时间服务响应，重要节假日保障",
+    "monthlyPrice": 0,
+    "billingType": "monthly"
+  }
+]

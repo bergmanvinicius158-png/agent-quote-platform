@@ -1,0 +1,7 @@
+[
+  { "id": "recipe-cost", "name": "配方成本核算", "description": "实时原料价格波动联动菜品毛利测算", "monthlyPrice": 400, "billingType": "monthly" },
+  { "id": "multi-store-sync", "name": "多店菜单同步", "description": "总部改价/上下架一键同步至全部门店", "monthlyPrice": 450, "billingType": "monthly" },
+  { "id": "seasonal-menu", "name": "时令菜单策划", "description": "季节/节日菜单模板与上新节奏建议", "monthlyPrice": 300, "billingType": "monthly" },
+  { "id": "dedicated-service", "name": "专人企业服务", "description": "7×24 小时专职人员响应服务", "monthlyPrice": 500, "billingType": "monthly" },
+  { "id": "maintenance", "name": "维保响应服务", "description": "工作时间服务响应，重要节假日保障", "monthlyPrice": 0, "billingType": "monthly" }
+]

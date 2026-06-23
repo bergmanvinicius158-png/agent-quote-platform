@@ -44,38 +44,11 @@ a:hover { text-decoration: underline; }
 .header-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0.75rem 1.5rem;
+  padding: 0.625rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.brand-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: grid;
-  place-items: center;
-  background: var(--section-bar);
-  border-radius: var(--radius);
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.brand strong {
-  display: block;
-  font-size: 1rem;
-}
-
-.brand span {
-  font-size: 0.75rem;
-  opacity: 0.75;
 }
 
 .header-nav {
@@ -370,6 +343,89 @@ a:hover { text-decoration: underline; }
 
 .toast.show { transform: translateY(0); opacity: 1; }
 .toast.error { border-color: var(--danger); }
+
+.agent-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.agent-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.agent-card:hover { border-color: var(--accent-blue); }
+.agent-card.selected { border-color: var(--accent-blue); background: #eff6ff; }
+.agent-card input { margin-top: 0.35rem; accent-color: var(--accent-blue); }
+.agent-card-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-blue);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.agent-card-body { display: flex; flex-direction: column; gap: 0.2rem; }
+.agent-card-body strong { font-size: 0.9375rem; }
+.agent-card-body small { color: var(--text-muted); font-size: 0.75rem; line-height: 1.4; }
+
+.bundle-hint {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0;
+}
+.bundle-hint.active { color: var(--accent-green); font-weight: 600; }
+
+.fee-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+.fee-tab {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+.fee-tab.active { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+
+.agent-fee-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+.agent-fee-icon {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e40af;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 6px;
+}
+.overview-table .row-discount td { color: var(--accent-green); font-weight: 600; }
 
 @media (max-width: 640px) {
   .header-nav { display: none; }
